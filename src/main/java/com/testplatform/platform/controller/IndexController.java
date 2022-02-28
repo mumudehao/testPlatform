@@ -10,4 +10,11 @@ public class IndexController {
     public String Index(){
         return "index";
     }
+
+
+    @GetMapping({"/404"})
+    public String E404(){
+        return "404";
+    }
+
 }
