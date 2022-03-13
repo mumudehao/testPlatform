@@ -7,7 +7,7 @@ public class InterfaceResultPO {
 
     private int resultId;
     private String excuteGroupId;
-    private String interfaceCaseId;
+    private String caseId;
     private int type;
     private String resultDetail;
     private LocalDate gmtCreate;
@@ -28,12 +28,12 @@ public class InterfaceResultPO {
         this.excuteGroupId = excuteGroupId;
     }
 
-    public String getInterfaceCaseId() {
-        return interfaceCaseId;
+    public String getCaseId() {
+        return caseId;
     }
 
-    public void setInterfaceCaseId(String interfaceCaseId) {
-        this.interfaceCaseId = interfaceCaseId;
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
     }
 
     public int getType() {
@@ -60,14 +60,11 @@ public class InterfaceResultPO {
         this.gmtCreate = gmtCreate;
     }
 
-    public InterfaceResultPO(){
 
-    }
-
-    public InterfaceResultPO(int resultId, String excuteGroupId, String interfaceCaseId, int type, String resultDetail) {
+    public InterfaceResultPO(int resultId, String excuteGroupId, String caseId, int type, String resultDetail) {
         this.resultId = resultId;
         this.excuteGroupId = excuteGroupId;
-        this.interfaceCaseId = interfaceCaseId;
+        this.caseId = caseId;
         this.type = type;
         this.resultDetail = resultDetail;
     }
@@ -77,7 +74,7 @@ public class InterfaceResultPO {
         return "InterfaceResultPO{" +
                 "resultId=" + resultId +
                 ", excuteGroupId='" + excuteGroupId + '\'' +
-                ", interfaceCaseId='" + interfaceCaseId + '\'' +
+                ", caseId='" + caseId + '\'' +
                 ", type=" + type +
                 ", resultDetail='" + resultDetail + '\'' +
                 ", gmtCreate=" + gmtCreate +
