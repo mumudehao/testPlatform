@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.testplatform.platform.dao.InterfaceResultMapper">
+
+    <select id="getInterfaceResultList"  resultType="com.testplatform.platform.POJO.InterfaceResultPO">
+        select * from interface_result;
+    </select>
+
+
+    <select id="getInterfaceCaseResultList"  resultType="com.testplatform.platform.POJO.InterfaceResultPO">
+        select * from interface_case ic
+            left join interface_result ir
+                on ic.case_id = case_id
+            order by ic.case_id;
+    </select>
+
+
+</mapper>
